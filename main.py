@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -16,7 +17,6 @@ def soma_formato2(numero1: int, numero2: int):
 
 
 # Passando o número 1 e 2 no corpo da requisição
-from pydantic import BaseModel
 class Numeros(BaseModel):
     numero1: int
     numero2: int
