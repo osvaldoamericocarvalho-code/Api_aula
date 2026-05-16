@@ -21,7 +21,7 @@ class Numeros(BaseModel):
     numero1: int
     numero2: int
 
-@app.post("/soma_formato3")
+@app.post("/soma_formato3",response_model=Resultado)
 def soma_formato3(numeros: Numeros):
     total = numeros.numero1 + numeros.numero2
     return {"resultado": total}
