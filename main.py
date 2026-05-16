@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-
+class Resultado(BaseModel):
+    resultado: int
 app = FastAPI()
 
 # Passando o número 1 e 2 na URL
